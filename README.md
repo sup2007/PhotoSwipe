@@ -1,6 +1,3 @@
-[![Stand With Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner-direct.svg)](https://savelife.in.ua/en/)
-
-
 PhotoSwipe v5 — JavaScript image gallery and lightbox
 
 **[Demo](https://photoswipe.com)** | **[Documentation](https://photoswipe.com/getting-started/)**
