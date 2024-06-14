@@ -34,7 +34,7 @@ lightbox.addFilter('itemData', (itemData, index) => {
 });
 
 // use <picture> instead of <img>
-lightbox.on('contentLoadImage', (e) => {
+lightbox.on('contentLoad', (e) => {
     const { content, isLazy } = e;
 
     if (content.data.webpSrc) {
@@ -79,11 +79,22 @@ lightbox.on('contentLoadImage', (e) => {
 
 // by default PhotoSwipe appends <img>,
 // but we want to append <picture>
-lightbox.on('contentAppendImage', (e) => {
+lightbox.on('contentAppend', (e) => {
   const { content } = e;
   if (content.pictureElement && !content.pictureElement.parentNode) {
     e.preventDefault();
     content.slide.container.appendChild(content.pictureElement);
+  }
+});
+
+// for next/prev navigation with <picture>
+// by default PhotoSwipe removes <img>,
+// but we want to remove <picture>
+lightbox.on('contentRemove', (e) => {
+  const { content } = e;
+  if (content.pictureElement && content.pictureElement.parentNode) {
+    e.preventDefault();
+    content.pictureElement.remove();
   }
 });
 

@@ -245,6 +245,11 @@ lightbox.init();
 </PswpCodePreview>
 
 
+### trapFocus
+
+Boolean, `true`. Trap focus within PhotoSwipe element while it's open. 
+
+
 ### returnFocus
 
 Boolean, `true`. Restore focus the last active element after PhotoSwipe is closed. 
@@ -363,6 +368,10 @@ lightbox.init();
 
 </PswpCodePreview>
 
+
+### initialZoomLevel, secondaryZoomLevel, maxZoomLevel
+
+Refer to [Adjusting zoom level](adjusting-zoom-level.md) page for more info. The default values are described [there too](adjusting-zoom-level.md#default-behaviour).
 
 
 ### errorMsg
